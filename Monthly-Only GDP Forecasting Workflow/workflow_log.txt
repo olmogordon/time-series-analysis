@@ -1,0 +1,62 @@
+2025-05-09 14:06:52.044461: ================================================================================
+2025-05-09 14:06:52.046553: Starting Monthly-Only GDP Forecasting Workflow at 2025-05-09 14:06:52.045296
+2025-05-09 14:06:52.047756: ================================================================================
+2025-05-09 14:06:52.048813: 
+1. Setting up configuration...
+2025-05-09 14:06:52.050011: Configuration set up with 7 monthly files, 1 quarterly files
+2025-05-09 14:06:52.052993: 
+2. Data Preprocessing...
+2025-05-09 14:09:33.058204: ================================================================================
+2025-05-09 14:09:33.064533: Starting Monthly-Only GDP Forecasting Workflow at 2025-05-09 14:09:33.062144
+2025-05-09 14:09:33.066006: ================================================================================
+2025-05-09 14:09:33.068270: 
+1. Setting up configuration...
+2025-05-09 14:09:33.070510: Configuration set up with 7 monthly files, 1 quarterly files
+2025-05-09 14:09:33.072135: 
+2. Data Preprocessing...
+2025-05-09 14:09:37.078614: Processed data: monthly=(926, 14), quarterly=(311, 2)
+2025-05-09 14:09:37.510831: Data overview saved to ./output/data_overview.png
+2025-05-09 14:09:37.512280: 
+3. Calculating Technical Indicators...
+2025-05-09 14:09:40.884217: Calculated technical indicators: monthly=(926, 630), quarterly=(311, 90)
+2025-05-09 14:09:40.886921: 
+4. Aligning Data for Model...
+2025-05-09 14:09:44.306002: Aligned monthly to quarterly: (311, 630)
+2025-05-09 14:09:44.309138: 
+5. Creating Train-Test Split...
+2025-05-09 14:09:44.323096: Train-test split at 2009-03-31 00:00:00: train=248, test=63
+2025-05-09 14:09:44.326457: 
+6. Building Models...
+2025-05-09 14:09:44.329640: Building Monthly-to-Quarterly Model...
+2025-05-09 14:09:44.693149: Monthly_MIDAS Model successfully built
+2025-05-09 14:09:44.697568: Monthly_MIDAS Model saved to ./output/monthly_midas_model.pkl
+2025-05-09 14:09:44.699163: Building Baseline Models...
+2025-05-09 14:09:44.709976: AR Baseline Model successfully built
+2025-05-09 14:09:44.712624: MA-4 Baseline Model defined
+2025-05-09 14:09:44.715990: 
+7. Evaluating Models...
+2025-05-09 14:09:44.736295: Generated predictions for Monthly_MIDAS: 63 quarters
+2025-05-09 14:09:44.739296: Generated predictions for AR_Baseline: 63 quarters
+2025-05-09 14:09:44.758614: Generated predictions for MA_4_Baseline: 63 quarters
+2025-05-09 14:09:44.763669: Calculating evaluation metrics...
+2025-05-09 14:09:44.964883: 
+Key Performance Metrics:
+2025-05-09 14:09:44.966698: --------------------------------------------------------------------------------
+2025-05-09 14:09:44.968006: Model                           RMSE        MAE    Dir Acc
+2025-05-09 14:09:44.969250: --------------------------------------------------------------------------------
+2025-05-09 14:09:44.970746: Monthly_MIDAS                 1.8460     0.9276     0.4194
+2025-05-09 14:09:44.972239: AR_Baseline                   1.9823     0.8485     0.4516
+2025-05-09 14:09:44.973737: MA_4_Baseline                 1.9151     0.9072     0.4032
+2025-05-09 14:09:44.975211: 
+Generating evaluation plots...
+2025-05-09 14:09:45.094592: Forecasts plot saved to ./output/gdp_forecasts.png
+2025-05-09 14:09:45.352247: Error distribution plot saved to ./output/error_distribution.png
+2025-05-09 14:09:45.617906: Rolling metrics plot saved to ./output/rolling_metrics.png
+2025-05-09 14:09:45.620625: 
+8. Generating Final Report...
+2025-05-09 14:09:48.474659: Comprehensive evaluation report saved to ./output/gdp_forecast_evaluation.md
+2025-05-09 14:09:48.477306: 
+9. Workflow Completed
+2025-05-09 14:09:48.479421: ================================================================================
+2025-05-09 14:09:48.481950: Monthly-Only GDP Forecasting Workflow completed at 2025-05-09 14:09:48.479672
+2025-05-09 14:09:48.484024: ================================================================================

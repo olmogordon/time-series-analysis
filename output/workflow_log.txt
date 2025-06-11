@@ -1,0 +1,24 @@
+2025-06-04 17:51:27.401035: ================================================================================
+2025-06-04 17:51:27.405952: Starting GDP Forecasting Workflow at 2025-06-04 17:51:27.404505
+2025-06-04 17:51:27.406916: ================================================================================
+2025-06-04 17:51:27.407740: 
+1. Setting up configuration...
+2025-06-04 17:51:27.408627: Configuration set up with 7 daily files, 2 weekly files, 7 monthly files, 1 quarterly files
+2025-06-04 17:51:27.411579: 
+2. Data Preprocessing...
+2025-06-04 17:51:43.306666: Processed data: daily=(25381, 18), weekly=(3038, 4), monthly=(926, 14), quarterly=(311, 2)
+2025-06-04 17:51:44.192552: Data overview saved to ./output/data_overview.png
+2025-06-04 17:51:44.195918: 
+3. Calculating Technical Indicators...
+2025-06-04 17:53:39.758227: Calculated technical indicators: daily=(25381, 810), weekly=(3038, 180), monthly=(926, 630), quarterly=(311, 90)
+2025-06-04 17:53:39.764559: 
+4. Aligning Data for Hierarchical Model...
+2025-06-04 17:55:22.854793: Aligned daily to weekly: (3038, 810)
+2025-06-04 17:55:26.758941: Aligned weekly to monthly: (926, 180)
+2025-06-04 17:55:30.034988: Aligned monthly to quarterly: (311, 630)
+2025-06-04 17:55:30.039679: 
+5. Creating Train-Test Split...
+2025-06-04 17:55:30.050543: Train-test split at 2009-03-31 00:00:00: train=248, test=63
+2025-06-04 17:55:30.052958: 
+6. Building Models...
+2025-06-04 17:55:30.057684: Building Pure Hierarchical Model...
